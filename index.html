@@ -8,255 +8,146 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&display=swap');
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:'Noto Sans JP',sans-serif;background:#f0f4f8;min-height:100vh;font-size:14px}
-:root{--green:#16a34a;--red:#dc2626;--blue:#2563eb;--gray:#6b7280;--border:#e5e7eb;--bg:#f0f4f8;--white:#ffffff}
-
-/* NAV */
-nav{background:#1c1917;color:#fff;padding:0 16px;display:flex;align-items:center;gap:0;position:sticky;top:0;z-index:100}
+nav{background:#1c1917;color:#fff;padding:0 16px;display:flex;align-items:center;position:sticky;top:0;z-index:100}
 .nav-logo{font-size:15px;font-weight:700;padding:14px 0;margin-right:16px}
 .nav-tab{padding:14px 14px;font-size:13px;cursor:pointer;border-bottom:3px solid transparent;color:#9ca3af;transition:all .2s}
 .nav-tab.active{color:#fff;border-bottom-color:#16a34a}
-
-/* LAYOUT */
 .page{display:none;padding:20px 16px 80px;max-width:800px;margin:0 auto}
 .page.active{display:block}
-
-/* CARDS */
 .card{background:#fff;border-radius:12px;padding:20px;margin-bottom:16px;box-shadow:0 1px 4px rgba(0,0,0,.06)}
 .card-title{font-size:15px;font-weight:700;margin-bottom:16px;color:#1c1917}
-
-/* FORM */
 label{display:block;font-size:12px;font-weight:600;color:#6b7280;margin-bottom:4px;margin-top:12px}
 label:first-child{margin-top:0}
-input,select,textarea{width:100%;padding:10px 12px;border:1px solid #e5e7eb;border-radius:8px;font-size:14px;font-family:inherit;outline:none;transition:border .2s}
-input:focus,select:focus,textarea:focus{border-color:#16a34a}
-textarea{resize:vertical;min-height:80px}
-
-/* BUTTONS */
+input,select{width:100%;padding:10px 12px;border:1px solid #e5e7eb;border-radius:8px;font-size:14px;font-family:inherit;outline:none;transition:border .2s}
+input:focus,select:focus{border-color:#16a34a}
 .btn{padding:10px 18px;border:none;border-radius:8px;font-size:14px;font-weight:600;cursor:pointer;font-family:inherit;transition:all .2s}
-.btn-green{background:#16a34a;color:#fff}
-.btn-green:hover{background:#15803d}
-.btn-blue{background:#2563eb;color:#fff}
-.btn-blue:hover{background:#1d4ed8}
-.btn-gray{background:#f3f4f6;color:#374151}
-.btn-gray:hover{background:#e5e7eb}
-.btn-red{background:#dc2626;color:#fff}
+.btn-green{background:#16a34a;color:#fff}.btn-green:hover{background:#15803d}
+.btn-blue{background:#2563eb;color:#fff}.btn-blue:hover{background:#1d4ed8}
+.btn-gray{background:#f3f4f6;color:#374151}.btn-gray:hover{background:#e5e7eb}
 .btn-sm{padding:6px 12px;font-size:12px}
 .btn-full{width:100%;margin-top:12px}
-
-/* UPLOAD */
 .upload-zone{border:2px dashed #d1d5db;border-radius:12px;padding:32px 16px;text-align:center;cursor:pointer;transition:all .2s}
 .upload-zone:hover,.upload-zone.drag{border-color:#16a34a;background:#f0fdf4}
-.upload-zone .icon{font-size:36px;margin-bottom:8px}
-.upload-zone .title{font-size:15px;font-weight:700;margin-bottom:4px}
-.upload-zone .sub{font-size:12px;color:#9ca3af}
 .preview-img{width:100%;max-height:200px;object-fit:cover;border-radius:8px;margin-top:12px}
-
-/* SIGN */
 #sign-canvas{border:2px solid #e5e7eb;border-radius:8px;width:100%;touch-action:none;cursor:crosshair;background:#fafafa}
-.sign-actions{display:flex;gap:8px;margin-top:8px}
-
-/* ITEMS */
 .item-row{background:#f9fafb;border-radius:8px;padding:12px;margin-bottom:8px;border:1px solid #f3f4f6}
 .item-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
-.item-name{font-weight:600;font-size:14px}
-.item-amount{font-weight:700;color:#16a34a}
-.item-meta{display:flex;gap:8px;flex-wrap:wrap}
-.badge{background:#f3f4f6;border-radius:4px;padding:2px 8px;font-size:11px;color:#6b7280}
-.badge-green{background:#dcfce7;color:#16a34a}
-.badge-blue{background:#dbeafe;color:#2563eb}
-select.item-account{margin-top:8px;padding:6px 8px;font-size:12px}
-
-/* LOADING */
+.badge-blue{background:#dbeafe;color:#2563eb;border-radius:4px;padding:2px 8px;font-size:11px}
 .loading{text-align:center;padding:32px;color:#6b7280}
 .spinner{width:28px;height:28px;border:3px solid #e5e7eb;border-top-color:#16a34a;border-radius:50%;animation:spin .8s linear infinite;margin:0 auto 12px}
 @keyframes spin{to{transform:rotate(360deg)}}
-
-/*申請ID */
-.app-id{background:#1c1917;color:#fff;border-radius:8px;padding:16px;text-align:center;margin-bottom:16px}
-.app-id .label{font-size:11px;color:#9ca3af;margin-bottom:4px}
-.app-id .id{font-size:22px;font-weight:700;letter-spacing:2px}
-
-/* LIST */
-.list-item{background:#fff;border-radius:10px;padding:14px 16px;margin-bottom:10px;box-shadow:0 1px 3px rgba(0,0,0,.06);cursor:pointer;transition:all .2s}
-.list-item:hover{box-shadow:0 2px 8px rgba(0,0,0,.1)}
+.app-id-box{background:#1c1917;color:#fff;border-radius:8px;padding:16px;text-align:center;margin-bottom:16px}
+.app-id-box .label{font-size:11px;color:#9ca3af;margin-bottom:4px}
+.app-id-box .id{font-size:22px;font-weight:700;letter-spacing:2px}
+.list-item{background:#fff;border-radius:10px;padding:14px 16px;margin-bottom:10px;box-shadow:0 1px 3px rgba(0,0,0,.06);cursor:pointer}
 .list-header{display:flex;justify-content:space-between;align-items:center}
-.list-date{font-size:12px;color:#9ca3af}
-.list-person{font-weight:600}
 .list-amount{font-weight:700;color:#dc2626;font-size:16px}
-.list-meta{font-size:12px;color:#6b7280;margin-top:4px}
 .status-badge{font-size:11px;padding:3px 10px;border-radius:20px;font-weight:600}
 .status-pending{background:#fef3c7;color:#d97706}
 .status-done{background:#dcfce7;color:#16a34a}
-
-/* SUMMARY */
 .summary-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px}
 .summary-card{background:#fff;border-radius:10px;padding:16px;text-align:center;box-shadow:0 1px 3px rgba(0,0,0,.06)}
 .summary-label{font-size:11px;color:#9ca3af;margin-bottom:4px}
 .summary-value{font-size:22px;font-weight:700}
-.summary-value.red{color:#dc2626}
-.summary-value.green{color:#16a34a}
-
-/* DETAIL MODAL */
 .modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:200;overflow-y:auto}
 .modal-overlay.open{display:flex;align-items:flex-start;justify-content:center;padding:20px 16px}
 .modal{background:#fff;border-radius:16px;width:100%;max-width:600px;padding:24px;margin:auto}
 .modal-title{font-size:17px;font-weight:700;margin-bottom:20px;display:flex;justify-content:space-between;align-items:center}
-.modal-close{background:none;border:none;font-size:20px;cursor:pointer;color:#6b7280}
-
-/* CSV TABLE */
 .csv-table{width:100%;border-collapse:collapse;font-size:12px;margin-top:8px}
 .csv-table th{background:#f3f4f6;padding:8px;text-align:left;font-weight:600;border:1px solid #e5e7eb}
 .csv-table td{padding:8px;border:1px solid #e5e7eb}
-
-/* SUCCESS */
 .success-box{background:#f0fdf4;border:1px solid #86efac;border-radius:12px;padding:24px;text-align:center}
-.success-icon{font-size:48px;margin-bottom:12px}
-.success-title{font-size:18px;font-weight:700;color:#16a34a;margin-bottom:8px}
-
-/* DIVIDER */
-.divider{border:none;border-top:1px solid #e5e7eb;margin:16px 0}
 </style>
 </head>
 <body>
-
 <nav>
   <div class="nav-logo">💴 現金精算</div>
-  <div class="nav-tab active" onclick="showPage('apply')">申請</div>
-  <div class="nav-tab" onclick="showPage('client')">顧問先</div>
-  <div class="nav-tab" onclick="showPage('accounting')">会計事務所</div>
+  <div class="nav-tab active" onclick="showPage('apply',this)">申請</div>
+  <div class="nav-tab" onclick="showPage('client',this)">顧問先</div>
+  <div class="nav-tab" onclick="showPage('accounting',this)">会計事務所</div>
 </nav>
 
-<!-- ===== 申請ページ ===== -->
+<!-- 申請 -->
 <div class="page active" id="page-apply">
-
-  <!-- STEP 1: レシート撮影 -->
   <div class="card" id="step1">
-    <div class="card-title">📷 レシートを撮影・アップロード</div>
-    <div class="upload-zone" id="upload-zone" onclick="document.getElementById('receipt-input').click()"
+    <div class="card-title">📷 レシートをアップロード</div>
+    <div class="upload-zone" id="upload-zone" onclick="document.getElementById('file-input').click()"
       ondragover="event.preventDefault();this.classList.add('drag')"
       ondragleave="this.classList.remove('drag')"
-      ondrop="event.preventDefault();this.classList.remove('drag');handleReceiptFile(event.dataTransfer.files[0])">
-      <input type="file" id="receipt-input" accept="image/*" style="display:none" onchange="handleReceiptFile(this.files[0])"/>
-      <div class="icon">🧾</div>
-      <div class="title">レシートをタップして選択</div>
-      <div class="sub">JPG・PNG・HEIC対応</div>
+      ondrop="event.preventDefault();this.classList.remove('drag');handleFile(event.dataTransfer.files[0])">
+      <input type="file" id="file-input" accept="image/*" style="display:none" onchange="handleFile(this.files[0])"/>
+      <div style="font-size:36px;margin-bottom:8px">🧾</div>
+      <div style="font-size:15px;font-weight:700;margin-bottom:4px">タップして選択</div>
+      <div style="font-size:12px;color:#9ca3af">JPG・PNG・HEIC対応</div>
     </div>
-    <div id="receipt-preview-wrap" style="display:none">
-      <img id="receipt-preview" class="preview-img"/>
-    </div>
-
-    <div id="api-key-section" style="margin-top:16px">
-      <label>Claude APIキー（初回のみ）</label>
-      <div style="display:flex;gap:8px">
-        <input type="password" id="api-key" placeholder="sk-ant-..." oninput="localStorage.setItem('claude_key',this.value)"/>
-        <button class="btn btn-gray btn-sm" style="flex-shrink:0" onclick="toggleApiKey()">👁</button>
-      </div>
-    </div>
-
-    <button class="btn btn-green btn-full" onclick="analyzeReceipt()" id="analyze-btn" style="display:none">
-      🔍 AIで解析する
-    </button>
+    <div id="preview-wrap" style="display:none"><img id="preview" class="preview-img"/></div>
+    <button class="btn btn-green btn-full" id="analyze-btn" style="display:none" onclick="analyzeReceipt()">🔍 AIで解析する</button>
   </div>
 
-  <!-- STEP 2: 解析結果 -->
   <div id="step2" style="display:none">
     <div class="card">
       <div class="card-title">📋 解析結果・編集</div>
-
       <label>精算者</label>
-      <select id="applicant">
-        <option>田中</option>
-        <option>佐藤</option>
-        <option>大橋</option>
-      </select>
-
-      <label>店名</label>
-      <input type="text" id="store-name"/>
-
-      <label>日付</label>
-      <input type="date" id="receipt-date"/>
-
-      <label>インボイス番号</label>
-      <input type="text" id="invoice-num" placeholder="T123456789012（なければ空欄）"/>
-
+      <select id="applicant"><option>田中</option><option>佐藤</option><option>大橋</option></select>
+      <label>店名</label><input type="text" id="store-name"/>
+      <label>日付</label><input type="date" id="receipt-date"/>
+      <label>インボイス番号</label><input type="text" id="invoice-num" placeholder="T123456789012（なければ空欄）"/>
       <div style="margin-top:16px">
-        <div class="card-title" style="margin-bottom:8px">明細・勘定科目</div>
+        <div style="font-weight:700;margin-bottom:8px">明細・勘定科目</div>
         <div id="items-container"></div>
       </div>
-
       <div style="background:#f9fafb;border-radius:8px;padding:12px;margin-top:12px">
-        <div style="display:flex;justify-content:space-between;margin-bottom:4px">
-          <span style="font-size:12px;color:#6b7280">消費税(8%)</span>
-          <span id="tax8-display" style="font-size:13px">—</span>
-        </div>
-        <div style="display:flex;justify-content:space-between;margin-bottom:4px">
-          <span style="font-size:12px;color:#6b7280">消費税(10%)</span>
-          <span id="tax10-display" style="font-size:13px">—</span>
-        </div>
-        <div style="display:flex;justify-content:space-between">
-          <span style="font-weight:700">合計</span>
-          <span id="total-display" style="font-weight:700;font-size:16px;color:#dc2626">—</span>
-        </div>
+        <div style="display:flex;justify-content:space-between;margin-bottom:4px"><span style="font-size:12px;color:#6b7280">消費税(8%)</span><span id="tax8">—</span></div>
+        <div style="display:flex;justify-content:space-between;margin-bottom:4px"><span style="font-size:12px;color:#6b7280">消費税(10%)</span><span id="tax10">—</span></div>
+        <div style="display:flex;justify-content:space-between"><span style="font-weight:700">合計</span><span id="total" style="font-weight:700;font-size:16px;color:#dc2626">—</span></div>
       </div>
     </div>
 
     <div class="card">
       <div class="card-title">💰 精算方法</div>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
-        <button class="btn btn-green" onclick="selectPayMethod('now')" id="btn-now">今すぐ精算</button>
-        <button class="btn btn-gray" onclick="selectPayMethod('later')" id="btn-later">後で精算</button>
+        <button class="btn btn-green" id="btn-now" onclick="selectMethod('now')">今すぐ精算</button>
+        <button class="btn btn-gray" id="btn-later" onclick="selectMethod('later')">後で精算</button>
       </div>
     </div>
 
-    <!-- 電子サイン -->
     <div class="card" id="sign-section" style="display:none">
       <div class="card-title">✍️ 電子サイン</div>
       <p style="font-size:12px;color:#6b7280;margin-bottom:12px">指またはマウスで署名してください</p>
       <canvas id="sign-canvas" width="600" height="160"></canvas>
-      <div class="sign-actions">
+      <div style="display:flex;gap:8px;margin-top:8px">
         <button class="btn btn-gray btn-sm" onclick="clearSign()">クリア</button>
-        <span style="font-size:12px;color:#9ca3af;line-height:32px;margin-left:4px" id="sign-status"></span>
+        <span id="sign-status" style="font-size:12px;color:#16a34a;line-height:32px;margin-left:4px"></span>
       </div>
     </div>
 
-    <button class="btn btn-green btn-full" onclick="submitApplication()">申請を完了する</button>
+    <button class="btn btn-green btn-full" onclick="submitApp()">申請を完了する</button>
   </div>
 
-  <!-- STEP 3: 完了 -->
   <div id="step3" style="display:none">
     <div class="success-box">
-      <div class="success-icon">✅</div>
-      <div class="success-title">申請が完了しました</div>
-      <div class="app-id" style="margin:16px 0">
+      <div style="font-size:48px;margin-bottom:12px">✅</div>
+      <div style="font-size:18px;font-weight:700;color:#16a34a;margin-bottom:8px">申請が完了しました</div>
+      <div class="app-id-box" style="margin:16px 0">
         <div class="label">申請ID</div>
-        <div class="id" id="result-app-id">—</div>
+        <div class="id" id="result-id">—</div>
       </div>
       <p style="font-size:13px;color:#6b7280;margin-bottom:16px">レシート束の一番上に申請IDを手書きで記載してください</p>
-      <button class="btn btn-green" onclick="resetApply()">新しい申請をする</button>
+      <button class="btn btn-green" onclick="location.reload()">新しい申請をする</button>
     </div>
   </div>
 </div>
 
-<!-- ===== 顧問先ページ ===== -->
+<!-- 顧問先 -->
 <div class="page" id="page-client">
   <div class="summary-grid">
-    <div class="summary-card">
-      <div class="summary-label">今月の支出</div>
-      <div class="summary-value red" id="client-total">—</div>
-    </div>
-    <div class="summary-card">
-      <div class="summary-label">未精算件数</div>
-      <div class="summary-value" id="client-pending">—</div>
-    </div>
+    <div class="summary-card"><div class="summary-label">今月の支出</div><div class="summary-value" style="color:#dc2626" id="c-total">—</div></div>
+    <div class="summary-card"><div class="summary-label">未精算件数</div><div class="summary-value" id="c-pending">—</div></div>
   </div>
-
-  <div class="card">
-    <div class="card-title">📋 申請一覧</div>
-    <div id="client-list"></div>
-  </div>
+  <div class="card"><div class="card-title">📋 申請一覧</div><div id="client-list"></div></div>
 </div>
 
-<!-- ===== 会計事務所ページ ===== -->
+<!-- 会計事務所 -->
 <div class="page" id="page-accounting">
   <div class="card">
     <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px">
@@ -267,395 +158,183 @@ select.item-account{margin-top:8px;padding:6px 8px;font-size:12px}
   </div>
 </div>
 
-<!-- ===== 詳細モーダル ===== -->
-<div class="modal-overlay" id="detail-modal">
+<!-- モーダル -->
+<div class="modal-overlay" id="modal">
   <div class="modal">
-    <div class="modal-title">
-      <span>申請詳細</span>
-      <button class="modal-close" onclick="closeModal()">✕</button>
-    </div>
-    <div id="modal-content"></div>
+    <div class="modal-title"><span>申請詳細</span><button style="background:none;border:none;font-size:20px;cursor:pointer;color:#6b7280" onclick="closeModal()">✕</button></div>
+    <div id="modal-body"></div>
   </div>
 </div>
 
 <script>
-// ── データ ──────────────────────────────────────────
-let applications = JSON.parse(localStorage.getItem('applications') || '[]');
-let currentData = null;
-let payMethod = null;
-let receiptB64 = null;
-let receiptMime = null;
+let apps = JSON.parse(localStorage.getItem('cash_apps')||'[]');
+let cur = null, payMethod = null, b64 = null, mime = null, signHasData = false;
 
-const ACCOUNTS = [
-  '会議費','交際費','旅費交通費','消耗品費','事務用品費',
-  '通信費','新聞図書費','厚生費','雑費','食費'
-];
+const ACCOUNTS = ['会議費','交際費','旅費交通費','消耗品費','事務用品費','通信費','新聞図書費','厚生費','雑費'];
+const AMAP = {'弁当':'会議費','サンドイッチ':'会議費','おにぎり':'会議費','お茶':'厚生費','コーヒー':'厚生費','飲料':'厚生費','ティッシュ':'消耗品費','洗剤':'消耗品費','ボールペン':'事務用品費','ノート':'事務用品費','電車':'旅費交通費','バス':'旅費交通費','タクシー':'旅費交通費','切手':'通信費','書籍':'新聞図書費','雑誌':'新聞図書費'};
 
-const ACCOUNT_MAP = {
-  '弁当':'会議費','弁当箱':'会議費','サンドイッチ':'会議費','おにぎり':'会議費',
-  'お茶':'厚生費','コーヒー':'厚生費','飲料':'厚生費','緑茶':'厚生費',
-  'ティッシュ':'消耗品費','洗剤':'消耗品費','ボールペン':'事務用品費','ノート':'事務用品費',
-  '電車':'旅費交通費','バス':'旅費交通費','タクシー':'旅費交通費',
-  '切手':'通信費','封筒':'通信費',
-  '書籍':'新聞図書費','雑誌':'新聞図書費',
-};
+function guessAccount(n){for(const[k,v]of Object.entries(AMAP))if(n.includes(k))return v;return '雑費';}
+function genId(){const d=new Date();return `CS-${d.getFullYear()}${String(d.getMonth()+1).padStart(2,'0')}-${String(apps.length+1).padStart(6,'0')}`;}
+function save(){localStorage.setItem('cash_apps',JSON.stringify(apps));}
 
-function guessAccount(name) {
-  for (const [k, v] of Object.entries(ACCOUNT_MAP)) {
-    if (name.includes(k)) return v;
-  }
-  return '雑費';
+function showPage(id,el){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.nav-tab').forEach(t=>t.classList.remove('active'));
+  document.getElementById('page-'+id).classList.add('active');
+  el.classList.add('active');
+  if(id==='client')renderClient();
+  if(id==='accounting')renderAccounting();
 }
 
-function genAppId() {
-  const now = new Date();
-  const ym = `${now.getFullYear()}${String(now.getMonth()+1).padStart(2,'0')}`;
-  const seq = String(applications.length + 1).padStart(6,'0');
-  return `CS-${ym}-${seq}`;
-}
-
-function saveApplications() {
-  localStorage.setItem('applications', JSON.stringify(applications));
-}
-
-// ── ページ切替 ────────────────────────────────────
-function showPage(id) {
-  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-  document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
-  document.getElementById('page-' + id).classList.add('active');
-  event.currentTarget.classList.add('active');
-  if (id === 'client') renderClientList();
-  if (id === 'accounting') renderAccountingList();
-}
-
-// ── APIキー ──────────────────────────────────────
-window.onload = () => {
-  const k = localStorage.getItem('claude_key') || '';
-  document.getElementById('api-key').value = k;
-};
-function toggleApiKey() {
-  const el = document.getElementById('api-key');
-  el.type = el.type === 'password' ? 'text' : 'password';
-}
-
-// ── レシート処理 ─────────────────────────────────
-function handleReceiptFile(file) {
-  if (!file || !file.type.startsWith('image/')) return;
-  receiptMime = file.type;
-  const reader = new FileReader();
-  reader.onload = e => {
-    receiptB64 = e.target.result.split(',')[1];
-    document.getElementById('receipt-preview').src = e.target.result;
-    document.getElementById('receipt-preview-wrap').style.display = 'block';
-    document.getElementById('analyze-btn').style.display = 'block';
+function handleFile(file){
+  if(!file||!file.type.startsWith('image/'))return;
+  mime=file.type;
+  const r=new FileReader();
+  r.onload=e=>{
+    b64=e.target.result.split(',')[1];
+    document.getElementById('preview').src=e.target.result;
+    document.getElementById('preview-wrap').style.display='block';
+    document.getElementById('analyze-btn').style.display='block';
   };
-  reader.readAsDataURL(file);
+  r.readAsDataURL(file);
 }
 
-async function analyzeReceipt() {
-  const apiKey = document.getElementById('api-key').value.trim();
-  if (!apiKey) { alert('APIキーを入力してください'); return; }
-  if (!receiptB64) { alert('レシートを選択してください'); return; }
-
-  document.getElementById('step1').innerHTML = `
-    <div class="loading">
-      <div class="spinner"></div>
-      <div>Claudeが解析中…</div>
-    </div>`;
-
-  try {
-    const res = await fetch('https://api.anthropic.com/v1/messages', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'x-api-key': apiKey,
-        'anthropic-version': '2023-06-01',
-        'anthropic-dangerous-direct-browser-access': 'true'
-      },
-      body: JSON.stringify({
-        model: 'claude-haiku-4-5-20251001',
-        max_tokens: 1024,
-        messages: [{
-          role: 'user',
-          content: [
-            { type: 'image', source: { type: 'base64', media_type: receiptMime, data: receiptB64 } },
-            { type: 'text', text: `レシートを解析してJSONのみ返してください。\n{"store_name":"店名","invoice_number":"T番号またはなし","date":"YYYY-MM-DD","items":[{"name":"商品名","amount":数値,"tax_category":"10%標準または8%軽減または非課税"}],"tax_8":数値orNull,"tax_10":数値orNull,"total":数値orNull}` }
-          ]
-        }]
-      })
+async function analyzeReceipt(){
+  if(!b64){alert('レシートを選択してください');return;}
+  document.getElementById('step1').innerHTML='<div class="loading"><div class="spinner"></div><div>Claudeが解析中…</div></div>';
+  try{
+    const res=await fetch('/api/analyze',{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({image:b64,mimeType:mime})
     });
-    if (!res.ok) { const e = await res.json(); throw new Error(e?.error?.message || res.status); }
-    const data = await res.json();
-    const raw = data?.content?.[0]?.text || '';
-    let text = raw.trim().replace(/^```(?:json)?\s*/i,'').replace(/\s*```\s*$/,'').trim();
-    const s = text.indexOf('{'), e2 = text.lastIndexOf('}');
-    currentData = JSON.parse(text.slice(s, e2+1));
+    if(!res.ok){const e=await res.json();throw new Error(e.error||res.status);}
+    cur=await res.json();
     renderStep2();
-  } catch(e) {
-    document.getElementById('step1').innerHTML = `
-      <div class="card"><div class="card-title" style="color:#dc2626">⚠ 解析エラー</div>
-      <p style="font-size:13px;color:#6b7280">${e.message}</p>
-      <button class="btn btn-gray btn-full" onclick="location.reload()">やり直す</button></div>`;
+  }catch(e){
+    document.getElementById('step1').innerHTML=`<div class="card"><div class="card-title" style="color:#dc2626">⚠ エラー</div><p style="font-size:13px;color:#6b7280">${e.message}</p><button class="btn btn-gray btn-full" onclick="location.reload()">やり直す</button></div>`;
   }
 }
 
-function renderStep2() {
-  document.getElementById('step1').style.display = 'none';
-  document.getElementById('step2').style.display = 'block';
-  document.getElementById('store-name').value = currentData.store_name || '';
-  document.getElementById('receipt-date').value = currentData.date || '';
-  document.getElementById('invoice-num').value = currentData.invoice_number || '';
-  document.getElementById('tax8-display').textContent = currentData.tax_8 != null ? `¥${currentData.tax_8.toLocaleString()}` : '—';
-  document.getElementById('tax10-display').textContent = currentData.tax_10 != null ? `¥${currentData.tax_10.toLocaleString()}` : '—';
-  document.getElementById('total-display').textContent = currentData.total != null ? `¥${currentData.total.toLocaleString()}` : '—';
-
-  const container = document.getElementById('items-container');
-  container.innerHTML = '';
-  (currentData.items || []).forEach((item, i) => {
-    const account = guessAccount(item.name);
-    const opts = ACCOUNTS.map(a => `<option${a===account?' selected':''}>${a}</option>`).join('');
-    container.innerHTML += `
-      <div class="item-row">
-        <div class="item-header">
-          <span class="item-name">${item.name}</span>
-          <span class="item-amount">¥${Number(item.amount||0).toLocaleString()}</span>
-        </div>
-        <div class="item-meta">
-          <span class="badge badge-blue">${item.tax_category||'不明'}</span>
-        </div>
-        <select class="item-account" id="account-${i}" style="margin-top:8px;width:100%;padding:6px 8px;font-size:12px;border:1px solid #e5e7eb;border-radius:6px">${opts}</select>
-      </div>`;
+function renderStep2(){
+  document.getElementById('step1').style.display='none';
+  document.getElementById('step2').style.display='block';
+  document.getElementById('store-name').value=cur.store_name||'';
+  document.getElementById('receipt-date').value=cur.date||'';
+  document.getElementById('invoice-num').value=cur.invoice_number||'';
+  document.getElementById('tax8').textContent=cur.tax_8!=null?`¥${cur.tax_8.toLocaleString()}`:'—';
+  document.getElementById('tax10').textContent=cur.tax_10!=null?`¥${cur.tax_10.toLocaleString()}`:'—';
+  document.getElementById('total').textContent=cur.total!=null?`¥${cur.total.toLocaleString()}`:'—';
+  const c=document.getElementById('items-container');
+  c.innerHTML='';
+  (cur.items||[]).forEach((item,i)=>{
+    const ac=guessAccount(item.name);
+    const opts=ACCOUNTS.map(a=>`<option${a===ac?' selected':''}>${a}</option>`).join('');
+    c.innerHTML+=`<div class="item-row">
+      <div class="item-header"><span style="font-weight:600">${item.name}</span><span style="font-weight:700;color:#16a34a">¥${Number(item.amount||0).toLocaleString()}</span></div>
+      <span class="badge-blue">${item.tax_category||'不明'}</span>
+      <select id="ac-${i}" style="margin-top:8px;width:100%;padding:6px 8px;font-size:12px;border:1px solid #e5e7eb;border-radius:6px">${opts}</select>
+    </div>`;
   });
 }
 
-function selectPayMethod(method) {
-  payMethod = method;
-  document.getElementById('btn-now').style.background = method==='now' ? '#15803d' : '';
-  document.getElementById('btn-later').style.background = method==='later' ? '#374151' : '';
-  document.getElementById('sign-section').style.display = method==='now' ? 'block' : 'none';
-  if (method==='now') initCanvas();
+function selectMethod(m){
+  payMethod=m;
+  document.getElementById('btn-now').style.opacity=m==='now'?'1':'0.5';
+  document.getElementById('btn-later').style.opacity=m==='later'?'1':'0.5';
+  document.getElementById('sign-section').style.display=m==='now'?'block':'none';
+  if(m==='now')initCanvas();
 }
 
-// ── 電子サイン ────────────────────────────────────
-let isDrawing = false, signHasData = false;
-function initCanvas() {
-  const canvas = document.getElementById('sign-canvas');
-  const rect = canvas.getBoundingClientRect();
-  canvas.width = rect.width * devicePixelRatio;
-  canvas.height = 160 * devicePixelRatio;
-  canvas.style.height = '160px';
-  const ctx = canvas.getContext('2d');
-  ctx.scale(devicePixelRatio, devicePixelRatio);
-  ctx.strokeStyle = '#1c1917';
-  ctx.lineWidth = 2.5;
-  ctx.lineCap = 'round';
-  ctx.lineJoin = 'round';
+let isDrawing=false;
+function initCanvas(){
+  const cv=document.getElementById('sign-canvas');
+  const r=cv.getBoundingClientRect();
+  cv.width=r.width*devicePixelRatio;cv.height=160*devicePixelRatio;cv.style.height='160px';
+  const ctx=cv.getContext('2d');ctx.scale(devicePixelRatio,devicePixelRatio);
+  ctx.strokeStyle='#1c1917';ctx.lineWidth=2.5;ctx.lineCap='round';ctx.lineJoin='round';
+  const pos=e=>{const r=cv.getBoundingClientRect(),s=e.touches?e.touches[0]:e;return{x:s.clientX-r.left,y:s.clientY-r.top};};
+  cv.onmousedown=cv.ontouchstart=e=>{e.preventDefault();isDrawing=true;const p=pos(e);ctx.beginPath();ctx.moveTo(p.x,p.y);};
+  cv.onmousemove=cv.ontouchmove=e=>{e.preventDefault();if(!isDrawing)return;const p=pos(e);ctx.lineTo(p.x,p.y);ctx.stroke();signHasData=true;document.getElementById('sign-status').textContent='署名済み ✓';};
+  cv.onmouseup=cv.ontouchend=()=>{isDrawing=false;};
+}
+function clearSign(){const cv=document.getElementById('sign-canvas');cv.getContext('2d').clearRect(0,0,cv.width,cv.height);signHasData=false;document.getElementById('sign-status').textContent='';}
 
-  const getPos = e => {
-    const r = canvas.getBoundingClientRect();
-    const src = e.touches ? e.touches[0] : e;
-    return { x: (src.clientX - r.left), y: (src.clientY - r.top) };
-  };
-
-  canvas.onmousedown = canvas.ontouchstart = e => {
-    e.preventDefault(); isDrawing = true;
-    const p = getPos(e); ctx.beginPath(); ctx.moveTo(p.x, p.y);
-  };
-  canvas.onmousemove = canvas.ontouchmove = e => {
-    e.preventDefault(); if (!isDrawing) return;
-    const p = getPos(e); ctx.lineTo(p.x, p.y); ctx.stroke();
-    signHasData = true;
-    document.getElementById('sign-status').textContent = '署名済み ✓';
-  };
-  canvas.onmouseup = canvas.ontouchend = () => { isDrawing = false; };
+function submitApp(){
+  if(!payMethod){alert('精算方法を選択してください');return;}
+  if(payMethod==='now'&&!signHasData){alert('電子サインを記入してください');return;}
+  const items=(cur.items||[]).map((item,i)=>({...item,account:document.getElementById('ac-'+i)?.value||'雑費'}));
+  const app={id:genId(),date:document.getElementById('receipt-date').value,applicant:document.getElementById('applicant').value,store_name:document.getElementById('store-name').value,invoice_number:document.getElementById('invoice-num').value,items,tax_8:cur.tax_8,tax_10:cur.tax_10,total:cur.total,pay_method:payMethod,status:payMethod==='now'?'精算済':'未精算',sign:payMethod==='now'?document.getElementById('sign-canvas').toDataURL():null,receipt_img:b64?`data:${mime};base64,${b64}`:null,created_at:new Date().toISOString()};
+  apps.push(app);save();
+  document.getElementById('result-id').textContent=app.id;
+  document.getElementById('step2').style.display='none';
+  document.getElementById('step3').style.display='block';
 }
 
-function clearSign() {
-  const canvas = document.getElementById('sign-canvas');
-  const ctx = canvas.getContext('2d');
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  signHasData = false;
-  document.getElementById('sign-status').textContent = '';
+function renderClient(){
+  const total=apps.reduce((s,a)=>s+(a.total||0),0);
+  const pending=apps.filter(a=>a.status==='未精算').length;
+  document.getElementById('c-total').textContent=`¥${total.toLocaleString()}`;
+  document.getElementById('c-pending').textContent=`${pending}件`;
+  const list=document.getElementById('client-list');
+  if(!apps.length){list.innerHTML='<p style="color:#9ca3af;text-align:center;padding:24px">申請はありません</p>';return;}
+  list.innerHTML=apps.slice().reverse().map(a=>`<div class="list-item" onclick="showDetail('${a.id}')">
+    <div class="list-header"><div><div style="font-size:12px;color:#9ca3af">${a.date} ${a.store_name}</div><div style="font-weight:600">${a.applicant}</div></div>
+    <div style="text-align:right"><div class="list-amount">-¥${(a.total||0).toLocaleString()}</div><span class="status-badge ${a.status==='精算済'?'status-done':'status-pending'}">${a.status}</span></div></div>
+    <div style="font-size:12px;color:#9ca3af;margin-top:4px">${a.id}</div>
+  </div>`).join('');
 }
 
-function getSignData() {
-  return document.getElementById('sign-canvas').toDataURL('image/png');
+function renderAccounting(){
+  const list=document.getElementById('accounting-list');
+  if(!apps.length){list.innerHTML='<p style="color:#9ca3af;text-align:center;padding:24px">申請はありません</p>';return;}
+  list.innerHTML=apps.slice().reverse().map(a=>`<div class="list-item" onclick="showDetail('${a.id}')">
+    <div class="list-header"><div><div style="font-size:12px;color:#9ca3af">${a.date}</div><div style="font-weight:600">${a.applicant} · ${a.store_name}</div></div>
+    <div style="text-align:right"><div class="list-amount">¥${(a.total||0).toLocaleString()}</div><span class="status-badge ${a.status==='精算済'?'status-done':'status-pending'}">${a.status}</span></div></div>
+    <div style="font-size:12px;color:#9ca3af;margin-top:4px">${a.id} · ${(a.items||[]).length}件</div>
+  </div>`).join('');
 }
 
-// ── 申請完了 ──────────────────────────────────────
-function submitApplication() {
-  if (!payMethod) { alert('精算方法を選択してください'); return; }
-  if (payMethod === 'now' && !signHasData) { alert('電子サインを記入してください'); return; }
-
-  const items = (currentData.items || []).map((item, i) => ({
-    ...item,
-    account: document.getElementById('account-'+i)?.value || '雑費'
-  }));
-
-  const app = {
-    id: genAppId(),
-    date: document.getElementById('receipt-date').value,
-    applicant: document.getElementById('applicant').value,
-    store_name: document.getElementById('store-name').value,
-    invoice_number: document.getElementById('invoice-num').value,
-    items,
-    tax_8: currentData.tax_8,
-    tax_10: currentData.tax_10,
-    total: currentData.total,
-    pay_method: payMethod,
-    status: payMethod === 'now' ? '精算済' : '未精算',
-    sign: payMethod === 'now' ? getSignData() : null,
-    receipt_img: receiptB64 ? `data:${receiptMime};base64,${receiptB64}` : null,
-    created_at: new Date().toISOString()
-  };
-
-  applications.push(app);
-  saveApplications();
-
-  document.getElementById('result-app-id').textContent = app.id;
-  document.getElementById('step2').style.display = 'none';
-  document.getElementById('step3').style.display = 'block';
-}
-
-function resetApply() {
-  location.reload();
-}
-
-// ── 顧問先 ────────────────────────────────────────
-function renderClientList() {
-  const total = applications.reduce((s, a) => s + (a.total || 0), 0);
-  const pending = applications.filter(a => a.status === '未精算').length;
-  document.getElementById('client-total').textContent = `¥${total.toLocaleString()}`;
-  document.getElementById('client-pending').textContent = `${pending}件`;
-
-  const list = document.getElementById('client-list');
-  if (!applications.length) { list.innerHTML = '<p style="color:#9ca3af;text-align:center;padding:24px">申請はありません</p>'; return; }
-
-  list.innerHTML = applications.slice().reverse().map(a => `
-    <div class="list-item" onclick="showDetail('${a.id}')">
-      <div class="list-header">
-        <div>
-          <div class="list-date">${a.date} ${a.store_name}</div>
-          <div class="list-person">${a.applicant}</div>
-        </div>
-        <div style="text-align:right">
-          <div class="list-amount">-¥${(a.total||0).toLocaleString()}</div>
-          <span class="status-badge ${a.status==='精算済'?'status-done':'status-pending'}">${a.status}</span>
-        </div>
-      </div>
-      <div class="list-meta">${a.id}</div>
-    </div>`).join('');
-}
-
-// ── 会計事務所 ────────────────────────────────────
-function renderAccountingList() {
-  const list = document.getElementById('accounting-list');
-  if (!applications.length) { list.innerHTML = '<p style="color:#9ca3af;text-align:center;padding:24px">申請はありません</p>'; return; }
-
-  list.innerHTML = applications.slice().reverse().map(a => `
-    <div class="list-item" onclick="showDetail('${a.id}')">
-      <div class="list-header">
-        <div>
-          <div class="list-date">${a.date}</div>
-          <div class="list-person">${a.applicant} · ${a.store_name}</div>
-        </div>
-        <div style="text-align:right">
-          <div class="list-amount">¥${(a.total||0).toLocaleString()}</div>
-          <span class="status-badge ${a.status==='精算済'?'status-done':'status-pending'}">${a.status}</span>
-        </div>
-      </div>
-      <div class="list-meta">${a.id} · ${(a.items||[]).length}件の明細</div>
-    </div>`).join('');
-}
-
-// ── 詳細モーダル ──────────────────────────────────
-function showDetail(id) {
-  const a = applications.find(x => x.id === id);
-  if (!a) return;
-
-  const items = (a.items||[]).map(item => `
-    <tr>
-      <td>${item.name}</td>
-      <td>${item.account||'—'}</td>
-      <td>${item.tax_category||'—'}</td>
-      <td style="text-align:right">¥${Number(item.amount||0).toLocaleString()}</td>
-    </tr>`).join('');
-
-  document.getElementById('modal-content').innerHTML = `
-    <div class="app-id"><div class="label">申請ID</div><div class="id">${a.id}</div></div>
+function showDetail(id){
+  const a=apps.find(x=>x.id===id);if(!a)return;
+  const rows=(a.items||[]).map(it=>`<tr><td>${it.name}</td><td>${it.account||'—'}</td><td>${it.tax_category||'—'}</td><td style="text-align:right">¥${Number(it.amount||0).toLocaleString()}</td></tr>`).join('');
+  document.getElementById('modal-body').innerHTML=`
+    <div class="app-id-box"><div class="label">申請ID</div><div class="id">${a.id}</div></div>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:16px;font-size:13px">
       <div><span style="color:#9ca3af">申請者</span><br><b>${a.applicant}</b></div>
       <div><span style="color:#9ca3af">日付</span><br><b>${a.date}</b></div>
       <div><span style="color:#9ca3af">店名</span><br><b>${a.store_name||'—'}</b></div>
       <div><span style="color:#9ca3af">インボイス</span><br><b>${a.invoice_number||'なし'}</b></div>
     </div>
-
-    <table class="csv-table">
-      <thead><tr><th>商品名</th><th>勘定科目</th><th>税区分</th><th>金額</th></tr></thead>
-      <tbody>${items}</tbody>
-    </table>
-
-    <div style="text-align:right;margin-top:8px;font-size:15px;font-weight:700">
-      合計: ¥${(a.total||0).toLocaleString()}
-    </div>
-
-    ${a.sign ? `
-      <hr style="margin:16px 0"/>
-      <div style="font-size:12px;font-weight:600;color:#6b7280;margin-bottom:8px">電子サイン</div>
-      <img src="${a.sign}" style="border:1px solid #e5e7eb;border-radius:8px;width:100%;max-height:120px;object-fit:contain;background:#fafafa"/>
-    ` : `<div style="margin-top:16px;padding:12px;background:#fef3c7;border-radius:8px;font-size:13px;color:#d97706">⚠ 未精算（サインなし）</div>`}
-
-    ${a.receipt_img ? `
-      <hr style="margin:16px 0"/>
-      <div style="font-size:12px;font-weight:600;color:#6b7280;margin-bottom:8px">レシート画像</div>
-      <img src="${a.receipt_img}" style="width:100%;border-radius:8px"/>
-    ` : ''}
-
-    ${a.status==='未精算' ? `
-      <button class="btn btn-green btn-full" style="margin-top:16px" onclick="completePayment('${a.id}')">現金精算を完了する</button>
-    ` : ''}
+    <table class="csv-table"><thead><tr><th>商品名</th><th>勘定科目</th><th>税区分</th><th>金額</th></tr></thead><tbody>${rows}</tbody></table>
+    <div style="text-align:right;margin-top:8px;font-size:15px;font-weight:700">合計: ¥${(a.total||0).toLocaleString()}</div>
+    ${a.sign&&a.sign!=='手動精算（サインなし）'?`<hr style="margin:16px 0"/><div style="font-size:12px;font-weight:600;color:#6b7280;margin-bottom:8px">電子サイン</div><img src="${a.sign}" style="border:1px solid #e5e7eb;border-radius:8px;width:100%;max-height:120px;object-fit:contain;background:#fafafa"/>`:''}
+    ${a.receipt_img?`<hr style="margin:16px 0"/><div style="font-size:12px;font-weight:600;color:#6b7280;margin-bottom:8px">レシート画像</div><img src="${a.receipt_img}" style="width:100%;border-radius:8px"/>`:''}
+    ${a.status==='未精算'?`<button class="btn btn-green btn-full" style="margin-top:16px" onclick="completePayment('${a.id}')">現金精算を完了する</button>`:''}
   `;
-
-  document.getElementById('detail-modal').classList.add('open');
+  document.getElementById('modal').classList.add('open');
 }
 
-function closeModal() {
-  document.getElementById('detail-modal').classList.remove('open');
+function closeModal(){document.getElementById('modal').classList.remove('open');}
+
+function completePayment(id){
+  const a=apps.find(x=>x.id===id);if(!a)return;
+  a.status='精算済';save();closeModal();renderClient();renderAccounting();alert('精算完了しました');
 }
 
-function completePayment(id) {
-  const a = applications.find(x => x.id === id);
-  if (!a) return;
-  a.status = '精算済';
-  a.sign = '手動精算（サインなし）';
-  saveApplications();
-  closeModal();
-  renderClientList();
-  renderAccountingList();
-  alert('精算完了しました');
-}
-
-// ── CSV出力 ───────────────────────────────────────
-function downloadCSV() {
-  if (!applications.length) { alert('申請データがありません'); return; }
-  const h = ['日付','申請ID','申請者','店名','商品名','勘定科目','税区分','出金','インボイス番号'];
-  const esc = v => { const s=String(v??''); return /[,"\n]/.test(s)?`"${s.replace(/"/g,'""')}"`:s; };
-  const rows = [];
-  applications.forEach(a => {
-    (a.items||[]).forEach(item => {
-      rows.push([
-        a.date, a.id, a.applicant, a.store_name||'',
-        item.name||'', item.account||'雑費', item.tax_category||'',
-        item.amount||0, a.invoice_number||''
-      ]);
+function downloadCSV(){
+  if(!apps.length){alert('申請データがありません');return;}
+  const h=['日付','摘要','出金','入金','申請ID','申請者','インボイス番号'];
+  const esc=v=>{const s=String(v??'');return /[,"\n]/.test(s)?`"${s.replace(/"/g,'""')}"`:`${s}`;};
+  const rows=[];
+  apps.forEach(a=>{
+    (a.items||[]).forEach(item=>{
+      rows.push([a.date,`${item.account||'雑費'} ${item.name}`,item.amount||0,'',a.id,a.applicant,a.invoice_number||'']);
     });
   });
-  const csv = '\uFEFF' + [h,...rows].map(r=>r.map(esc).join(',')).join('\n');
-  const blob = new Blob([csv],{type:'text/csv;charset=utf-8;'});
-  Object.assign(document.createElement('a'),{
-    href: URL.createObjectURL(blob),
-    download: `現金出納帳_${new Date().toISOString().slice(0,10)}.csv`
-  }).click();
+  const csv='\uFEFF'+[h,...rows].map(r=>r.map(esc).join(',')).join('\n');
+  const blob=new Blob([csv],{type:'text/csv;charset=utf-8;'});
+  Object.assign(document.createElement('a'),{href:URL.createObjectURL(blob),download:`現金出納帳_${new Date().toISOString().slice(0,10)}.csv`}).click();
 }
 </script>
 </body>
